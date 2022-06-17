@@ -6,4 +6,16 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
+  clientCertificates: [
+    {
+      url: 'https://websocketstest.com/',
+      ca: [],
+      certs: [
+        {
+          key: 'cypress/certs/ca-key.pem',
+          cert: 'cypress/certs/ca-cert.pem'
+        }
+      ]
+    }
+  ]
 });
